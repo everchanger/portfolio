@@ -1,0 +1,19 @@
+li 
+{
+	list-style: none;
+}
+
+li > a > .glyphicon
+{
+	top: 2px;
+}
+
+.no-padding
+{
+	padding: 0;	
+}
+
+.hidden-elm 
+{
+	display: none;
+}
