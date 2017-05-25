@@ -8,6 +8,11 @@ li > a > .glyphicon
 	top: 2px;
 }
 
+.no-margin-bottom
+{
+	margin-bottom: 0px;
+}
+
 .no-padding
 {
 	padding: 0;	
@@ -16,4 +21,73 @@ li > a > .glyphicon
 .hidden-elm 
 {
 	display: none;
+}
+
+.profile-name
+{
+	color: white;
+}
+
+.profile-content
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.profile-contact-me a
+{
+	color: white !important;
+	font-size: 25px;
+}
+
+.profile-occupation
+{
+	color: white;
+	font-size: 25px;
+	margin-bottom:5px;
+}
+
+.img-profile
+{
+	border: 5px solid white;
+}
+
+@media (min-width: 605px) {
+    .profile-info
+	{
+		padding-top: 50px;
+		padding-left: 15px;
+		float: left !important;
+	}
+
+	.profile-occupation
+	{
+		float: left !important;
+	}
+
+	.img-profile
+	{
+		float: left !important;
+	}
+}
+@media (max-width: 605px) {
+    .profile-info
+	{
+		padding-top: 0px;
+		padding-left: 0px;
+	}
+
+	.profile-content
+	{
+		text-align: center;		
+	}
+}
+
+.profile
+{
+   	width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+	background-image: url(/images/hill-bg.jpg);
 }

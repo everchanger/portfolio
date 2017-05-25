@@ -29,7 +29,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
 					<li>
-						<a href="?view=home">My work</a>
+						<a href="?view=work">My work</a>
 					</li>
 					<li>
 						<a href="?view=cv">CV</a>
@@ -54,6 +54,16 @@
 		  </div>
 		</nav>
 				
+		<div class="container-fluid profile">
+			<div class="col-xs-12 profile-content">
+					<img class="img-profile img-circle" src="/images/joakim.jpg" alt="Joakim Rosenstam - Software Developer" /> 
+					<div class="profile-info">
+							<h1 class="profile-name">Joakim Rosenstam</h1>
+							<p class="profile-occupation">Software Developer</p>
+					</div>
+			</div>
+    </div>
+
 		<div class="container-fluid main-content">
 			<!-- INCLUDE THE SELECTED VIEW! -->
 			<?php include 'view/'.$view_file_name.'.php';?>
@@ -68,7 +78,6 @@
 
 		<!-- JAVASCRIPT -->
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap3-typeahead.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
 	</body>
