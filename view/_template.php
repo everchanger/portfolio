@@ -7,11 +7,10 @@
 		<!-- CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-journal-min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 		<nav class="navbar navbar-default no-margin-bottom" id='main_navbar'>
 		  <div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -29,9 +28,6 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
 					<li>
-						<a href="?view=work">My work</a>
-					</li>
-					<li>
 						<a href="?view=cv">CV</a>
 					</li>
 					<li>
@@ -41,13 +37,13 @@
 				
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-							<a target="_blank" href="https://www.linkedin.com/in/jrosenstam">LinkedIn</a>
+							<a target="_blank" href="https://www.linkedin.com/in/jrosenstam" title="LinkedIn"><i class="fa fa-linkedin fa-lg"></i></a>
 					</li>
 					<li>
-							<a target="_blank" href="https://www.facebook.com/joakim.rosenstam">Facebook</a>
+							<a target="_blank" href="https://www.facebook.com/joakim.rosenstam" title="Facebook"><i class="fa fa-facebook fa-lg"></i></a>
 					</li>
 					<li>
-							<a target="_blank" href="https://github.com/everchanger">Github</a>
+							<a target="_blank" href="https://github.com/everchanger" title="Github"><i class="fa fa-github fa-lg"></i></a>
 					</li>
 			  </ul>
 			</div>
@@ -70,13 +66,17 @@
 		</div>
 
 
-		<!--<footer class="footer">
-			<div class="container-fluid footer-content">
-				<p class="text-muted">Copyright Joakim Rosenstam 2017</p>
+		<footer class="footer">
+			<div class="container-fluid footer-container">
+				<div class="col-xs-12">
+					<a href="mailto:joakim.rosenstam@gmail.com"><i class="fa fa-envelope"></i> joakim.rosenstam@gmail.com</a>
+					<a href="tel:+46708635402"><i class="fa fa-phone"></i> +46 (0)70 863 54 02</a>
+				</div>
 			</div>
-		</footer>-->	
+		</footer>
 
 		<!-- JAVASCRIPT -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
