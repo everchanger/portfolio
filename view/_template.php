@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-default no-margin-bottom" id='main_navbar'>
-		  <div class="container-fluid">
+		  <div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -26,15 +26,18 @@
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			  <ul class="nav navbar-nav">
-					<li>
+				<ul class="nav navbar-nav">
+					<li class="<?= $view_file_name == 'cv' ? 'active' : '' ?>">
 						<a href="?view=cv">CV</a>
 					</li>
-					<li>
+					<li class="<?= $view_file_name == 'projects' ? 'active' : '' ?>">
+						<a href="?view=projects">Projects</a>
+					</li>
+					<li class="<?= $view_file_name == 'about' ? 'active' : '' ?>">
 						<a href="?view=about">About me</a>
 					</li>
-			  </ul>
-				
+				</ul>			
+
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 							<a target="_blank" href="https://www.linkedin.com/in/jrosenstam" title="LinkedIn"><i class="fa fa-linkedin fa-lg"></i></a>
@@ -50,7 +53,8 @@
 		  </div>
 		</nav>
 				
-		<div class="container-fluid profile">
+		<div class="profile">
+			<div class="container">
 			<div class="col-xs-12 profile-content">
 					<img class="img-profile img-circle" src="/images/joakim.jpg" alt="Joakim Rosenstam - Software Developer" /> 
 					<div class="profile-info">
@@ -58,16 +62,17 @@
 							<p class="profile-occupation">Software Developer</p>
 					</div>
 			</div>
+			</div>
     </div>
 
-		<div class="container-fluid main-content">
+		<div class="container main-content">
 			<!-- INCLUDE THE SELECTED VIEW! -->
-			<?php include 'view/'.$view_file_name.'.php';?>
+			<?php include 'view/'.$view_file_name.'.html';?>
 		</div>
 
 
 		<footer class="footer">
-			<div class="container-fluid footer-container">
+			<div class="container footer-container">
 				<div class="col-xs-12">
 					<a href="mailto:joakim.rosenstam@gmail.com"><i class="fa fa-envelope"></i> joakim.rosenstam@gmail.com</a>
 					<a href="tel:+46708635402"><i class="fa fa-phone"></i> +46 (0)70 863 54 02</a>
