@@ -40,13 +40,13 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-							<a target="_blank" href="https://www.linkedin.com/in/jrosenstam" title="LinkedIn"><i class="fa fa-linkedin fa-lg"></i></a>
+							<a target="_blank" href="https://www.linkedin.com/in/jrosenstam" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
 					</li>
 					<li>
-							<a target="_blank" href="https://www.facebook.com/joakim.rosenstam" title="Facebook"><i class="fa fa-facebook fa-lg"></i></a>
+							<a target="_blank" href="https://www.facebook.com/joakim.rosenstam" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
 					</li>
 					<li>
-							<a target="_blank" href="https://github.com/everchanger" title="Github"><i class="fa fa-github fa-lg"></i></a>
+							<a target="_blank" href="https://github.com/everchanger" title="Github"><i class="fab fa-github fa-lg"></i></a>
 					</li>
 			  </ul>
 			</div>
@@ -75,7 +75,7 @@
 			<div class="container footer-container">
 				<div class="col-xs-12">
 					<a href="mailto:joakim.rosenstam@gmail.com"><i class="fa fa-envelope"></i> joakim.rosenstam@gmail.com</a>
-					<a href="tel:+46708635402"><i class="fa fa-phone"></i> +46 (0)70 863 54 02</a>
+					<a href="tel:+46732628070"><i class="fa fa-phone"></i> +46 (0)73 262 80 70</a>
 				</div>
 			</div>
 		</footer>
