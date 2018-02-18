@@ -187,6 +187,19 @@ li > a > .glyphicon
 	font-weight: 200;
 }
 
+.job-header {
+	border-top: 2px solid #eeeeee;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.job-header h2
+{
+	display: inline-block;
+	margin: auto 0 auto 0;
+}
+
 .tool-list
 {
 	padding-left: 20px;
