@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<!-- CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap-journal-min.css">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	</head>
 	<body>
 		<nav class="navbar navbar-default no-margin-bottom" id='main_navbar'>
@@ -54,6 +54,7 @@
 		</nav>
 				
 		<div class="profile">
+			<div class="profile-overlay"></div>
 			<div class="container container-header">
 			<div class="col-xs-12 profile-content">
 					<img class="img-profile img-circle" src="/images/joakim.jpg" alt="Joakim Rosenstam - Software Developer" /> 
