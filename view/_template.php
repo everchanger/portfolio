@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Joakim Rosenstam - Portfolio</title>
+		<meta name="description" content="<?= $metaDescription ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<!-- CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -40,13 +41,13 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-							<a target="_blank" href="https://www.linkedin.com/in/jrosenstam" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+							<a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jrosenstam" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
 					</li>
 					<li>
-							<a target="_blank" href="https://www.facebook.com/joakim.rosenstam" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+							<a target="_blank" rel="noopener" href="https://www.facebook.com/joakim.rosenstam" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
 					</li>
 					<li>
-							<a target="_blank" href="https://github.com/everchanger" title="Github"><i class="fab fa-github fa-lg"></i></a>
+							<a target="_blank" rel="noopener" href="https://github.com/everchanger" title="Github"><i class="fab fa-github fa-lg"></i></a>
 					</li>
 			  </ul>
 			</div>
