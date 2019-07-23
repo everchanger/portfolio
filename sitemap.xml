@@ -10,22 +10,22 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://joakim.rosenstam.net/?view=home</loc>
+  <loc>https://joakim.rosenstam.net/home</loc>
   <lastmod>2018-07-09T16:39:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://joakim.rosenstam.net/?view=cv</loc>
+  <loc>https://joakim.rosenstam.net/cv</loc>
   <lastmod>2018-07-09T16:39:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://joakim.rosenstam.net/?view=projects</loc>
+  <loc>https://joakim.rosenstam.net/projects</loc>
   <lastmod>2018-07-09T16:39:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://joakim.rosenstam.net/?view=about</loc>
+  <loc>https://joakim.rosenstam.net/about</loc>
   <lastmod>2018-07-09T16:39:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
