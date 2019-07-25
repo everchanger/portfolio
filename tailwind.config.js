@@ -5,6 +5,8 @@ module.exports = {
                body: ['Roboto'],
       }
   },
-  variants: {},
+  variants: {
+      opacity: ['responsive', 'hover'],
+  },
   plugins: []
 }
