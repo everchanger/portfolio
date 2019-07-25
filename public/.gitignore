@@ -4,4 +4,8 @@
 !.gitignore
 !js
 !css
+!img
+!img/*
+!webfonts
+!webfonts/*
 !sitemap.xml

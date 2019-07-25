@@ -1,35 +1,40 @@
-<html class="font-body bg-gray-300">
+<!DOCTYPE html>
+<html lang="en" class="font-body text-sm text-gray-700 bg-gray-300">
    <head>
       <meta charset="utf-8">
+      <title>Joakim Rosenstam - Portfolio</title>
+      <meta name="description" content="Personal portfolio of Joakim Rosenstam, a software developer currently working at Webhallen AB as a fullstack developer in Stockholm, Sweden.">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
       <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/index.css">
-      <script src="https://kit.fontawesome.com/e7d604762e.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css"></link>
+      <link rel="stylesheet" type="text/css" href="css/solid.min.css"></link>
+      <link rel="stylesheet" type="text/css" href="css/brands.min.css"></link>
    </head>
    <body class="container mx-auto bg-gray-200 border-t-2 border-gray-500 p-4 sm:mt-6">
       <nav class="flex items-center justify-between flex-wrap py-6 sm:pt-2">
          <div class="flex items-center flex-no-shrink mr-6 text-lg">
-            <a href="?view=home" class="font-semibold text-xl text-gray-600 hover:text-gray-700">Joakim Rosenstam</a>
+            <a href="?view=home" class="font-semibold text-xl text-gray-700 hover:text-gray-600">Joakim Rosenstam</a>
          </div>
          <div id="hamburger-button" class="block sm:hidden">
             <button class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray hover:text-gray hover:border-gray-700">
             <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Meny</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button>
          </div>
-         <div id="mobile-menu" class="w-full block hidden text-gray-600 flex-grow sm:flex sm:items-center sm:w-auto">
+         <div id="mobile-menu" class="w-full block hidden text-gray-700 flex-grow sm:flex sm:items-center sm:w-auto">
             <div class="sm:flex-grow">
-               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 hover:text-gray-700"  href="">CV</a>
-               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 hover:text-gray-700"  href="">Projects</a>
+               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 hover:text-gray-600"  href="">CV</a>
+               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 hover:text-gray-600"  href="">Projects</a>
             </div>
             <div>
-               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 opacity-75 hover:opacity-100" style="color: #0676b5;" href=""><i class="fab fa-linkedin fa-fw fa-lg"></i></a>
-               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 hover:text-gray-700" style="" href=""><i class="fab fa-github fa-fw fa-lg"></i></a>
-               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 opacity-75 hover:opacity-100" style="color: #4366b2;" href=""><i class="fab fa-facebook fa-fw fa-lg"></i></a>
+               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 opacity-100 hover:opacity-75" style="color: #0676b5;" href="" title="LinkedIn"><i class="fab fa-linkedin fa-fw fa-lg"></i></a>
+               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 hover:text-gray-600" style="" href="" title="Github"><i class="fab fa-github fa-fw fa-lg"></i></a>
+               <a class="block mt-4 mr-4 font-semibold sm:inline-block sm:mt-0 opacity-100 hover:opacity-75" style="color: #4366b2;" href="" title="Facebook"><i class="fab fa-facebook fa-fw fa-lg"></i></a>
             </div>
          </div>
       </nav>
-      <div class="bg-gray-400 p-4 shadow-inner mb-4">
+      <div class="bg-gray-300 p-4 shadow-inner rounded mb-4">
          <div id="card" class="flex flex-col items-center sm:flex-row">
             <img class="border-4 border-white rounded-full shadow-md" src="img/joakim.jpg" alt="Joakim Rosenstam" />
             <div class="text-center mt-4 sm:mt-0 sm:ml-6 sm:text-left">
@@ -39,66 +44,78 @@
          </div>
       </div>
       <div class="flex flex-col sm:flex-row sm:justify-around">
-         <div class="bg-gray-400 p-4 shadow-inner text-sm mb-4 sm:mb-0 sm:w-1/3 sm:mr-4">
+         <div class="bg-gray-300 p-4 shadow-inner rounded mb-4 sm:mb-0 sm:w-1/3 sm:mr-4">
             <h2 class="text-lg mb-2">Me</h2>
             <p class="mb-2">I'm a software developer based in Stockholm, Sweden. My skills are broad and I've worked on pretty much every part of the projects I've been involved in. Everything from the planning/architecture stage to the prototyping and actual production stages to final delivery of the product. I started out as a C++ developer but I would like to think that I'm also fluent in web (HTML/CSS/JS/PHP) by now.</p>
             <p>I've spent most of my career at Expisoft AB a small IT security company where I worked as a developer. I'm currently employeed at Webhallen AB as a fullstack web-developer.</p>
          </div>
-         <div class="bg-gray-400 p-4 shadow-inner mb-4 sm:mb-0 sm:w-1/3">
+         <div class="bg-gray-300 p-4 shadow-inner rounded mb-4 sm:mb-0 sm:w-1/3">
             <h2 class="text-lg mb-2">Work</h2>
             <div class="flex flex-wrap">
                <div class="w-1/2 mb-4">
-                  <h3 class="font-bold">Frontend</h3>
-                  <p>Vue</p>
-                  <p>CSS</p>
-                  <p>Tailwindcss</p>
-                  <p>NPM</p>
-                  <p>Sass</p>
-                  <p>JavaScript</p>
-                  <p>Bootstrap</p>
+                  <h3 class="text-xs mb-1">Frontend</h3>
+                  <p class="ml-1">Vue</p>
+                  <p class="ml-1">CSS</p>
+                  <p class="ml-1">Tailwindcss</p>
+                  <p class="ml-1">NPM</p>
+                  <p class="ml-1">Sass</p>
+                  <p class="ml-1">JavaScript</p>
+                  <p class="ml-1">Bootstrap</p>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="font-bold">Backend</h3>
-                  <p>PHP</p>
-                  <p>Laravel</p>
+                  <h3 class="text-xs mb-1">CI/CD</h3>
+                  <p class="ml-1">CruiseControl.NET</p>
+                  <p class="ml-1">Jenkins</p>
+                  <p class="ml-1">Selenium</p>
+                  <p class="ml-1">WebdriverIO</p>
+                  <p class="ml-1">Mocha</p>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="font-bold">CI/CD</h3>
-                  <p>CruiseControl.NET</p>
-                  <p>Jenkins</p>
-                  <p>Selenium</p>
-                  <p>WebdriverIO</p>
-                  <p>Mocha</p>
+                  <h3 class="text-xs mb-1">Backend</h3>
+                  <p class="ml-1">PHP</p>
+                  <p class="ml-1">Laravel</p>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="font-bold">Native development</h3>
-                  <p>C, C++</p>
-                  <p>Qt5</p>
-                  <p>Minor Java experience</p>
+                  <h3 class="text-xs mb-1">Native development</h3>
+                  <p class="ml-1">C, C++</p>
+                  <p class="ml-1">Qt5</p>
+                  <p class="ml-1">Minor Java experience</p>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="font-bold">DevOps</h3>
-                  <p>VMWare environments</p>
-                  <p>Docker</p>
-                  <p>Linux, multiple distros</p>
-                  <p>Windows AD</p>
+                  <h3 class="text-xs mb-1">DevOps</h3>
+                  <p class="ml-1">VMWare environments</p>
+                  <p class="ml-1">Docker</p>
+                  <p class="ml-1">Linux, multiple distros</p>
+                  <p class="ml-1">Windows AD</p>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="font-bold">Other</h3>
-                  <p>PKI & X.509 certificates</p>
-                  <p>SVN</p>
-                  <p>Git</p>
-                  <p>GDB & WinDBG</p>
+                  <h3 class="text-xs mb-1">Other</h3>
+                  <p class="ml-1">PKI & X.509 certificates</p>
+                  <p class="ml-1">SVN</p>
+                  <p class="ml-1">Git</p>
+                  <p class="ml-1">GDB & WinDBG</p>
                </div>
             </div>
          </div>
-         <div class="bg-gray-400 p-4 shadow-inner mb-4 sm:mb-0 sm:w-1/3 sm:ml-4">
+         <div class="bg-gray-300 p-4 shadow-inner rounded mb-4 sm:mb-0 sm:w-1/3 sm:ml-4">
             <h2 class="text-lg mb-2">Contact</h2>
             <div class="flex flex-col">
-               <a href="mailto:joakim.rosenstam@gmail.com" class="mb-1" ><i class="fa fa-envelope fa-fw mr-2"></i> joakim.rosenstam@gmail.com</a>
-               <a href="tel:+46732628070" class="mb-1"><i class="fa fa-phone fa-fw mr-2"></i> +46 (0)73 262 80 70</a>
-               <a href="https://discordapp.com/" class="mb-1" target="_blank" rel="noopener"><i class="fab fa-discord fa-fw mr-2"></i> everchanger#2119</a>
-               <a href="skype:joakim.rosenstam?chat" class="mb-1"><i class="fab fa-skype fa-fw mr-2"></i> joakim.rosenstam</a>
+               <a class="mb-2 h-12 flex flex-col" href="mailto:joakim.rosenstam@gmail.com">
+                  <p class="text-xs">Mail</p>
+                  <p class="ml-1">joakim.rosenstam@gmail.com</p>
+               </a>
+               <a class="mb-2 h-12 flex flex-col" href="tel:+46732628070">
+                  <p class="text-xs">Phone</p>
+                  <p class="ml-1">+46 (0)73 262 80 70</p>
+               </a>
+               <a class="mb-2 h-12 flex flex-col" href="https://discordapp.com/"  target="_blank" rel="noopener">
+                  <p class="text-xs">Discord</p>
+                  <p class="ml-1">everchanger#2119</p>
+               </a>
+               <a class="mb-2 h-12 flex flex-col"  href="skype:joakim.rosenstam?chat">
+                  <p class="text-xs">Skype</p>
+                  <p class="ml-1">joakim.rosenstam</p>
+               </a>
             </div>
          </div>
       </div>
