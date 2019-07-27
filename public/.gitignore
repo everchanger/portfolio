@@ -6,6 +6,10 @@
 !css
 !img
 !img/*
+!img/logos/*
 !webfonts
 !webfonts/*
 !sitemap.xml
+!favicon-16x16.png
+!favicon-32x32.png
+!favicon.ico

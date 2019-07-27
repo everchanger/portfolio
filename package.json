@@ -6,9 +6,10 @@
     "build": {
       "patterns": [
         "src/html",
+        "src/css",
         "src/includes"
       ],
-      "extensions": "html"
+      "extensions": "html,css"
     }
   },
   "scripts": {
