@@ -7,90 +7,25 @@
    </head>
    <body class="container">
       <include-nav />
-      <div class="bg-gray-100 p-4 shadow-inner rounded mb-4">
-         <div id="card" class="flex flex-col items-center sm:flex-row">
-            <img class="border-4 border-white rounded-full shadow-md" src="img/joakim.jpg" alt="Joakim Rosenstam" />
-            <div class="text-center mt-4 sm:mt-0 sm:ml-6 sm:text-left">
-               <h1 class="text-2xl">Joakim Rosenstam</h1>
-               <p>Software Developer</p>
-            </div>
-         </div>
+      <div class="info-field project">
+         <h2 class="text-2xl mb-1">Let me encrypt</h2>
+         <a class="block" target="_blank" rel="noopener" href="https://experimental.rosenstam.net/">Live demo</a>
+         <a class="block mb-4" target="_blank" rel="noopener" href="https://github.com/everchanger/letmeencrypt">Github source</a>
+         <p>This is a hobby project of mine I started working on March 2017. 
+            It's meant to be a simple and modern way of safetly transfering and storing files securely.
+            The idea is simple and has been done before but now progress in Javascript cryptography functions gives us the tools to encrypt and decrypt 
+            directly in the browser without the need of a native client!
+            This means the user doesn't have to download any bulky software, he/she can simply create an account, 
+            find his/hers friend and send the file encrypted directly from their browser.</p>
+         <p>I also use this project to try out new web ideas and to practice my MySQL skills. The server uses standard PHP and a MySQL database, nothing out of the ordinary is needed server side.</p>
       </div>
-      <div class="flex flex-col sm:flex-row sm:justify-around">
-         <div class="bg-gray-100 p-4 shadow-inner rounded mb-4 sm:mb-0 sm:w-1/3 sm:mr-4">
-            <h2 class="text-lg mb-2">Me</h2>
-            <p class="mb-2">I'm a software developer based in Stockholm, Sweden. My skills are broad and I've worked on pretty much every part of the projects I've been involved in. Everything from the planning/architecture stage to the prototyping and actual production stages to final delivery of the product. I started out as a C++ developer but I would like to think that I'm also fluent in web (HTML/CSS/JS/PHP) by now.</p>
-            <p>I've spent most of my career at Expisoft AB a small IT security company where I worked as a developer. I'm currently employeed at Webhallen AB as a fullstack web-developer.</p>
-         </div>
-         <div class="bg-gray-100 p-4 shadow-inner rounded mb-4 sm:mb-0 sm:w-1/3">
-            <h2 class="text-lg mb-2">Work</h2>
-            <div class="flex flex-wrap">
-               <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">Frontend</h3>
-                  <p class="ml-1">Vue</p>
-                  <p class="ml-1">CSS</p>
-                  <p class="ml-1">Tailwindcss</p>
-                  <p class="ml-1">NPM</p>
-                  <p class="ml-1">Sass</p>
-                  <p class="ml-1">JavaScript</p>
-                  <p class="ml-1">Bootstrap</p>
-               </div>
-               <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">CI/CD</h3>
-                  <p class="ml-1">CruiseControl.NET</p>
-                  <p class="ml-1">Jenkins</p>
-                  <p class="ml-1">Selenium</p>
-                  <p class="ml-1">WebdriverIO</p>
-                  <p class="ml-1">Mocha</p>
-               </div>
-               <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">Backend</h3>
-                  <p class="ml-1">PHP</p>
-                  <p class="ml-1">Laravel</p>
-               </div>
-               <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">Native development</h3>
-                  <p class="ml-1">C, C++</p>
-                  <p class="ml-1">Qt5</p>
-                  <p class="ml-1">Minor Java experience</p>
-               </div>
-               <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">DevOps</h3>
-                  <p class="ml-1">VMWare environments</p>
-                  <p class="ml-1">Docker</p>
-                  <p class="ml-1">Linux, multiple distros</p>
-                  <p class="ml-1">Windows AD</p>
-               </div>
-               <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">Other</h3>
-                  <p class="ml-1">PKI & X.509 certificates</p>
-                  <p class="ml-1">SVN</p>
-                  <p class="ml-1">Git</p>
-                  <p class="ml-1">GDB & WinDBG</p>
-               </div>
-            </div>
-         </div>
-         <div class="bg-gray-100 p-4 shadow-inner rounded mb-4 sm:mb-0 sm:w-1/3 sm:ml-4">
-            <h2 class="text-lg mb-2">Contact</h2>
-            <div class="flex flex-col">
-               <a class="mb-2 h-12 flex flex-col" href="mailto:joakim.rosenstam@gmail.com">
-                  <p class="text-xs">Mail</p>
-                  <p class="ml-1">joakim.rosenstam@gmail.com</p>
-               </a>
-               <a class="mb-2 h-12 flex flex-col" href="tel:+46732628070">
-                  <p class="text-xs">Phone</p>
-                  <p class="ml-1">+46 (0)73 262 80 70</p>
-               </a>
-               <a class="mb-2 h-12 flex flex-col" href="https://discordapp.com/"  target="_blank" rel="noopener">
-                  <p class="text-xs">Discord</p>
-                  <p class="ml-1">everchanger#2119</p>
-               </a>
-               <a class="mb-2 h-12 flex flex-col"  href="skype:joakim.rosenstam?chat">
-                  <p class="text-xs">Skype</p>
-                  <p class="ml-1">joakim.rosenstam</p>
-               </a>
-            </div>
-         </div>
+      <div class="info-field project">
+         <h2 class="text-2xl mb-1">Granny helper</h2>
+         <a class="block mb-4" target="_blank" rel="noopener" href="https://github.com/everchanger/grannyhelper/tree/multiuser">Github source</a>
+         <p>This is a tool that I made for my grandmother who suffers from dementia. The basic idea is to be able to show the end user a simple display that shows the current date, time of day (morning, day, night) and an event that an administrator adds via a simple web interface. Via the administrator web interface an administrator can set a recurring event or add special events that appears on a specific date. The event is a text often just a few sentences and a photo.</p>
+         <p>Since my grandmother does not own a computer and did not have internet, I had to make the project simple and easy to use. I solved the internet access by getting a 3G/4G mobile broadband modem with wifi. Then I configured an Raspberry Pi to boot into chromium fullscreen mode and navigate to the display endpoint. The webpage then pings the server every ten minutes asking for changes, if there are changes (new day or an administrator has changed the event for that day) the page gets reloaded. This was made to make the display use less data as the 3G/4G broadband often comes with a limit of use per month. There is no mouse, no keyboard and no buttons my grandmother has to deal with, it's all plug and play.</p>
+         <p>We were not sure how my grandmother would react to this new technology but it seems to be working out great! She reads the display and my mother (the main administrator of my grandmother's display) have come up with some interesting ways to use the display, not just for events that are occurring in the future but also for reminding my grandmother of event that has already happened that day that she might have forgotten had happen.</p>
+         <p>The version I link is a more advanced version where I wanted to see if this concept could work for care helpers and not just single users. This versions supports organization, multiple displays, multiple users and administrators.</p>
       </div>
       <include-body />
    </body>

@@ -10,17 +10,34 @@ body {
    @apply mx-auto bg-gray-200 border-t-2 border-gray-500 p-4 mb-8;
 }
 
-.job-summary p {
+
+.work-blurb ul li {
+   @apply ml-1 mb-1;
+}
+
+.work-blurb h3 {
+   @apply font-medium mb-2;
+}
+
+.job-summary p, .project p {
    @apply mb-2;
 }
 
 .info-field {
-   @apply bg-white p-4 mb-6 border-t-4 border-gray-500;
+   @apply bg-white p-4 mb-6 border-t-2 border-gray-400;
 }
+
+.info-field a {
+   @apply text-blue-700 underline;
+}
+
+.info-field a:hover {
+}
+
 
 .info-field .job-listing-header {
    @apply flex flex-col items-center mb-2;
-} 
+}
 
 @screen sm {
    body {

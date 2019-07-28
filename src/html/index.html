@@ -7,89 +7,100 @@
    </head>
    <body class="container">
       <include-nav />
-      <div class="mb-8">
-         
-         <div id="card" class="flex flex-col items-center sm:flex-row">
-            <img class="border-4 border-white rounded-full shadow-lg h-40 w-40" src="img/joakim.jpg" alt="Joakim Rosenstam" />
-            <div class="text-center mt-4 sm:mt-0 sm:ml-6 sm:text-left">
-               <h1 class="text-2xl">Joakim Rosenstam</h1>
-               <p>Software Developer</p>
+      <div class="flex flex-col items-center p-4 sm:flex-row mb-8">
+         <img class="border-4 border-white rounded-full shadow-lg h-40 w-40" src="img/joakim.jpg" alt="Joakim Rosenstam" />
+         <div class="text-center mt-4 sm:mt-0 sm:ml-6 sm:text-left">
+            <h1 class="text-2xl">Joakim Rosenstam</h1>
+            <p>Software Developer</p>
+         </div>
+         <div class="flex flex-col flex-grow mt-2 pt-2 border-t border-gray-400 sm:border-t-0 sm:pt-0 sm:mt-0 md:flex-row md:justify-around xl:justify-start xl:ml-16">
+            <div class="flex flex-col md:mr-8">
+               <a class="mb-2 h-12 flex flex-col" href="mailto:joakim.rosenstam@gmail.com">
+                  <p class="text-sm font-medium">Mail</p>
+                  <p class="ml-2">joakim.rosenstam@gmail.com</p>
+               </a>
+               <a class="mb-2 h-12 flex flex-col" href="tel:+46732628070">
+                  <p class="text-sm font-medium">Phone</p>
+                  <p class="ml-2">+46 (0)73 262 80 70</p>
+               </a>
+            </div>
+            <div class="flex flex-col">
+               <a class="mb-2 h-12 flex flex-col" href="https://discordapp.com/"  target="_blank" rel="noopener">
+                  <p class="text-sm font-medium">Discord</p>
+                  <p class="ml-2">everchanger#2119</p>
+               </a>
+               <a class="mb-2 h-12 flex flex-col"  href="skype:joakim.rosenstam?chat">
+                  <p class="text-sm font-medium">Skype</p>
+                  <p class="ml-2">joakim.rosenstam</p>
+               </a>
             </div>
          </div>
       </div>
       <div class="flex flex-col sm:flex-row sm:justify-around">
-         <div class="info-field sm:mb-0 sm:w-1/3 sm:mr-4">
-            <h2 class="text-lg mb-2">Me</h2>
+         <div class="info-field sm:mb-0 sm:w-1/2 sm:mr-2">
             <p class="mb-2">I'm a software developer based in Stockholm, Sweden. My skills are broad and I've worked on pretty much every part of the projects I've been involved in. Everything from the planning/architecture stage to the prototyping and actual production stages to final delivery of the product. I started out as a C++ developer but I would like to think that I'm also fluent in web (HTML/CSS/JS/PHP) by now.</p>
             <p>I've spent most of my career at Expisoft AB a small IT security company where I worked as a developer. I'm currently employeed at Webhallen AB as a fullstack web-developer.</p>
          </div>
-         <div class="info-field sm:mb-0 sm:w-1/3">
-            <h2 class="text-lg mb-2">Work</h2>
+         <div class="info-field work-blurb sm:mb-0 sm:w-1/2 sm:ml-2">
             <div class="flex flex-wrap">
                <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">Frontend</h3>
-                  <p class="ml-1">Vue</p>
-                  <p class="ml-1">CSS</p>
-                  <p class="ml-1">Tailwindcss</p>
-                  <p class="ml-1">NPM</p>
-                  <p class="ml-1">Sass</p>
-                  <p class="ml-1">JavaScript</p>
-                  <p class="ml-1">Bootstrap</p>
+                  <h3>Frontend</h3>
+                  <ul>
+                     <li>JavaScript</li>
+                     <li>Vue</li>
+                     <li>CSS</li>
+                     <li>SCSS</li>
+                     <li>Bootstrap</li>
+                     <li>Tailwindcss</li>
+                     <li>NPM</li>
+                  </ul>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">CI/CD</h3>
-                  <p class="ml-1">CruiseControl.NET</p>
-                  <p class="ml-1">Jenkins</p>
-                  <p class="ml-1">Selenium</p>
-                  <p class="ml-1">WebdriverIO</p>
-                  <p class="ml-1">Mocha</p>
+                  <h3>Backend</h3>
+                  <ul>
+                     <li>PHP</li>
+                     <li>Laravel</li>
+                     <li>MySql</li>
+                     <li>Doctrine</li>
+                     <li>Eloquent</li>
+                  </ul>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">Backend</h3>
-                  <p class="ml-1">PHP</p>
-                  <p class="ml-1">Laravel</p>
+                  <h3>CI/CD</h3>
+                  <ul>
+                     <li>CruiseControl.NET</li>
+                     <li>Jenkins</li>
+                     <li>Selenium</li>
+                     <li>WebdriverIO</li>
+                     <li>Mocha</li>
+                  </ul>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">Native development</h3>
-                  <p class="ml-1">C, C++</p>
-                  <p class="ml-1">Qt5</p>
-                  <p class="ml-1">Minor Java experience</p>
+                  <h3>Native development</h3>
+                  <ul>
+                     <li>C, C++</li>
+                     <li>Qt5</li>
+                     <li>Minor Java experience</li>
+                  </ul>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">DevOps</h3>
-                  <p class="ml-1">VMWare environments</p>
-                  <p class="ml-1">Docker</p>
-                  <p class="ml-1">Linux, multiple distros</p>
-                  <p class="ml-1">Windows AD</p>
+                  <h3>DevOps</h3>
+                  <ul>
+                     <li>VMWare environments</li>
+                     <li>Docker</li>
+                     <li>Linux</li>
+                     <li>Windows AD</li>
+                  </ul>
                </div>
                <div class="w-1/2 mb-4">
-                  <h3 class="text-xs mb-1">Other</h3>
-                  <p class="ml-1">PKI & X.509 certificates</p>
-                  <p class="ml-1">SVN</p>
-                  <p class="ml-1">Git</p>
-                  <p class="ml-1">GDB & WinDBG</p>
+                  <h3>Other</h3>
+                  <ul>
+                     <li>PKI & X.509 certificates</li>
+                     <li>SVN</li>
+                     <li>Git</li>
+                     <li>GDB & WinDBG</li>
+                  </ul>
                </div>
-            </div>
-         </div>
-         <div class="info-field sm:mb-0 sm:w-1/3 sm:ml-4">
-            <h2 class="text-lg mb-2">Contact</h2>
-            <div class="flex flex-col">
-               <a class="mb-2 h-12 flex flex-col" href="mailto:joakim.rosenstam@gmail.com">
-                  <p class="text-xs">Mail</p>
-                  <p class="ml-1">joakim.rosenstam@gmail.com</p>
-               </a>
-               <a class="mb-2 h-12 flex flex-col" href="tel:+46732628070">
-                  <p class="text-xs">Phone</p>
-                  <p class="ml-1">+46 (0)73 262 80 70</p>
-               </a>
-               <a class="mb-2 h-12 flex flex-col" href="https://discordapp.com/"  target="_blank" rel="noopener">
-                  <p class="text-xs">Discord</p>
-                  <p class="ml-1">everchanger#2119</p>
-               </a>
-               <a class="mb-2 h-12 flex flex-col"  href="skype:joakim.rosenstam?chat">
-                  <p class="text-xs">Skype</p>
-                  <p class="ml-1">joakim.rosenstam</p>
-               </a>
             </div>
          </div>
       </div>
