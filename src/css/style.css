@@ -25,6 +25,10 @@ body {
    @apply text-gray-800;
 }
 
+#talk {
+   transition: opacity 350ms ease; 
+}
+
 .work-blurb ul li {
    @apply ml-1 mb-1;
 }

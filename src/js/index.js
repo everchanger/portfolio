@@ -30,3 +30,15 @@ function handleMobileNavbar() {
       }
    })
 }
+
+function triggerEgg() {
+   const talk = document.getElementById('talk');
+   if(talk.classList.contains('opacity-0')) {
+      talk.classList.remove('opacity-0');
+      talk.classList.add('opacity-100');
+      setTimeout(function() {
+         talk.classList.remove('opacity-100');
+         talk.classList.add('opacity-0');
+      }, 3000)
+   }
+}
