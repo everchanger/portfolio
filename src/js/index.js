@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", onDocumentLoaded);
 
 function onDocumentLoaded() {
    handleMobileNavbar();
+   const path = window.location.pathname.substr(1);
+   const pos = path.lastIndexOf('.');
+   if(pos !== -1) {
+      const name = path.substr(0, pos);
+      document.getElementById('nav-' + name).classList.add('active');
+   }
 }
 
 function handleMobileNavbar() {

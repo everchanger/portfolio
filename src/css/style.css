@@ -21,6 +21,10 @@ body {
    max-height: 190px;
 }
 
+#mobile-menu a.active {
+   @apply text-gray-800;
+}
+
 .work-blurb ul li {
    @apply ml-1 mb-1;
 }
