@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-   @apply font-body text-sm border-t-2 border-gray-500 text-gray-700 bg-gray-200 overflow-scroll;
+   @apply font-body text-sm text-gray-700 bg-gray-200 overflow-scroll;
 }
 
 body {
@@ -38,7 +38,7 @@ body {
 }
 
 .info-field {
-   @apply bg-white p-4 mb-6 border-t-2 border-gray-400;
+   @apply bg-white p-4 mb-6 border-t-2 border-gray-400 rounded shadow-md;
 }
 
 .info-field a, .link {

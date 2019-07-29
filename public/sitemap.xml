@@ -6,17 +6,19 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://joakim.rosenstam.net/</loc>
-  <lastmod>2018-07-09T16:39:44+00:00</lastmod>
+  <lastmod>2019-07-29T14:53:51+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://joakim.rosenstam.net/cv.html</loc>
-  <lastmod>2018-07-09T16:39:44+00:00</lastmod>
+  <lastmod>2019-07-29T14:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://joakim.rosenstam.net/projects.html</loc>
-  <lastmod>2018-07-09T16:39:44+00:00</lastmod>
+  <lastmod>2019-07-29T14:53:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
+
 </urlset>
