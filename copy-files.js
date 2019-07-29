@@ -4,6 +4,7 @@ const fs = require('fs');
 const includes = [];
 const includePath = path.join(__dirname, 'src/includes');
 const directoryPath = path.join(__dirname, 'src/html');
+const jsPath = path.join(__dirname, 'src/js');
 const publicPath = path.join(__dirname, 'public');
 
 const includeFiles = fs.readdirSync(includePath);
@@ -17,6 +18,7 @@ includeFiles.forEach(function (file) {
    includes[filename] = fs.readFileSync(path.join(includePath, file), 'utf8');
 });
 
+// Replace include-* with contents of said include file (html)
 fs.readdir(directoryPath, function (err, files) {
    if (err) {
       return console.log('Unable to scan src/html directory: ' + err);
@@ -46,5 +48,19 @@ fs.readdir(directoryPath, function (err, files) {
             if (err) return console.log(err);
          });
       });
+   });
+});
+
+// Copy js files
+fs.readdir(jsPath, function (err, files) {
+   if (err) {
+      return console.log('Unable to scan src/js directory: ' + err);
+   } 
+
+   files.forEach(function (file) {
+      // Do whatever you want to do with the file
+      fs.copyFile(path.join(jsPath, file), path.join(publicPath + '/js/', file), (err) => {
+         if (err) throw err;
+       });
    });
 });
