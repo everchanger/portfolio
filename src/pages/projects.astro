@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/index.astro'
+import ProjectCard from '../components/ProjectCard.svelte'
+
+import data from '../data/projects.js'
+
+const { projects } = data
+---
+
+<Layout title="Joakim Rosenstam" description="Personal site of Joakim Rosenstam, a software developer currently working at Dahl AB as a fullstack developer in Stockholm, Sweden.">
+  { projects.map(entry => (<ProjectCard project_name={entry.project_name} demo_link={entry.demo_link} source_link={entry.source_link} summary={entry.summary} />)) }
+</Layout>
