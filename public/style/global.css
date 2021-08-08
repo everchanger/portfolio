@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply font-body text-sm text-gray-700 bg-gray-200 overflow-scroll leading-normal;
+}
+
+body {
+  @apply mx-auto p-4;
+}
+
+
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 350ms ease; 
+}
+
+#mobile-menu.active {
+  max-height: 190px;
+}
+
+#mobile-menu a.active {
+  @apply text-gray-800;
+}
+
+#talk {
+  transition: opacity 350ms ease; 
+}
+
+.work-blurb ul li {
+  @apply ml-1 mb-1;
+}
+
+.work-blurb h3 {
+  @apply font-medium mb-2;
+}
+
+.job-summary p, .project p {
+  @apply mb-2;
+}
+
+.info-field {
+  @apply bg-white p-4 mb-6 border-t-2 border-gray-400 rounded shadow-md;
+}
+
+.info-field a, .link {
+  @apply text-blue-800;
+}
+
+.info-field a:hover, .link:hover {
+  @apply text-blue-900 underline;
+}
+
+
+.info-field .job-listing-header {
+  @apply flex flex-col items-center mb-2;
+}
+
+@screen sm {
+  #mobile-menu {
+     max-height: 21px;
+  }
+
+  .info-field .job-listing-header {
+     @apply flex-row justify-between;
+  }
+}

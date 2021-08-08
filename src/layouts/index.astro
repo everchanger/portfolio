@@ -1,0 +1,52 @@
+---
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" type="text/css" href="/style/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/style/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="/style/brands.min.css" />
+    <title>{ title || 'Joakim Rosenstam' }</title>
+    <meta name="description" content={ description }>
+  </head>
+
+  <body class="container">
+    <nav class="flex items-center justify-between flex-wrap pt-2 pb-4">
+      <div class="flex items-center flex-no-shrink mr-6 text-lg">
+        <a href="/" class="font-medium text-gray-600 hover:text-gray-500">Joakim Rosenstam</a>
+      </div>
+      <div id="hamburger-button" class="block sm:hidden">
+        <button class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray-500">
+          <svg class="fill-current stroke-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path id="icon-path-closed" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            <path style="stroke-width: 3;" id="icon-path-opened" class="hidden" d="M 0,0 L 20,20 M 0,20 L 20,0" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="w-full text-gray-600 flex-grow sm:flex sm:items-center sm:w-auto">
+        <div class="sm:flex-grow">
+          <a id="nav-cv" class="nav-link block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-gray-500" href="/cv">CV</a>
+          <a id="nav-projects" class="nav-link block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-gray-500" href="/projects">Projects</a>
+        </div>
+        <div class="border-t border-gray-400 mt-4 sm:border-t-0 sm:mt-0">
+          <a class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-gray-500" href="https://www.linkedin.com/in/jrosenstam/" title="LinkedIn"><i class="fab fa-linkedin fa-fw fa-lg"></i></a>
+          <a class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-gray-500" href="https://github.com/everchanger" title="Github"><i class="fab fa-github fa-fw fa-lg"></i></a>
+          <a class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-gray-500" href="https://www.facebook.com/joakim.rosenstam" title="Facebook"><i class="fab fa-facebook fa-fw fa-lg"></i></a>
+        </div>
+      </div>
+    </nav>
+    <slot/>
+  </body>
+
+  <script type="text/javascript" src="/assets/index.js"></script>
+</html>

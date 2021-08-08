@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/index.astro'
+import ResumeCard from '../components/ResumeCard.svelte'
+
+import data from '../data/cv.js'
+
+const { resume } = data
+---
+
+<Layout title="Joakim Rosenstam" description="Personal site of Joakim Rosenstam, a software developer currently working at Dahl AB as a fullstack developer in Stockholm, Sweden.">
+  { resume.map(entry => (<ResumeCard company={entry.company} logo={entry.logo} employment_period={entry.employment_period} summary={entry.summary} tools={entry.tools} />)) }
+</Layout>
