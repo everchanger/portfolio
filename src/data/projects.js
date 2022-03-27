@@ -2,10 +2,6 @@ export default {
     projects: [
       {
         project_name: 'Vue Clicker',
-        demo_link: {
-          href: 'http://clicker.rosenstam.net/',
-          text: 'Live demo',
-        },
         source_link: {
           href: 'https://github.com/everchanger/vue-clicker',
           text: 'Github source',
@@ -16,10 +12,6 @@ export default {
       },
       {
         project_name: 'Placement cards',
-        demo_link: {
-          href: 'http://card.rosenstam.net/',
-          text: 'Live demo',
-        },
         source_link: {
           href: 'https://github.com/everchanger/card/',
           text: 'Github source',
@@ -30,10 +22,6 @@ export default {
       },
       {
         project_name: 'Let me encrypt',
-        demo_link: {
-          href: 'https://experimental.rosenstam.net/',
-          text: 'Live demo',
-        },
         source_link: {
           href: 'https://github.com/everchanger/letmeencrypt',
           text: 'Github source',
