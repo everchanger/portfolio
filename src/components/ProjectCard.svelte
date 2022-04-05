@@ -9,7 +9,7 @@
   
   <Card>
   <slot name="header">
-    <h2 class="text-2xl mb-1">{ project_name }</h2>
+    <h2 class="mb-1 text-2xl">{ project_name }</h2>
     {#if demo_link}
       <div>
           <a target="_blank" rel="noopener" href={demo_link.href}>{demo_link.text}</a>
