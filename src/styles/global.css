@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply overflow-scroll text-sm leading-normal text-gray-700 bg-white font-body;
-}
-
-body {
-  @apply p-4 mx-auto;
-}
-
 
 #mobile-menu {
   max-height: 0;
@@ -37,12 +29,16 @@ body {
   @apply mb-2 font-medium;
 }
 
+.job-summary {
+  @apply mx-auto max-w-prose;
+}
+
 .job-summary p, .project p {
   @apply mb-2;
 }
 
 .info-field {
-  @apply p-4 mb-10 bg-white border-t-4 border-green-100 rounded shadow-md;
+  @apply p-4 mb-16 bg-white rounded;
 }
 
 .info-field a, .link {
@@ -55,7 +51,7 @@ body {
 
 
 .info-field .job-listing-header {
-  @apply flex flex-col items-center mb-2;
+  @apply flex flex-col items-center mb-6;
 }
 
 @screen sm {
@@ -64,6 +60,10 @@ body {
   }
 
   .info-field .job-listing-header {
-     @apply flex-row justify-between;
+    @apply mb-8;
+  }
+
+  .info-field {
+    @apply items-center mb-32;
   }
 }

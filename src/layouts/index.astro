@@ -1,9 +1,13 @@
 ---
+import '../styles/global.css';
+import '../styles/fontawesome.min.css'
+import '../styles/solid.min.css'
+import '../styles/brands.min.css'
 const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-scroll text-sm leading-normal text-gray-700 bg-white font-body">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,15 +15,11 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style/global.css">
-    <link rel="stylesheet" type="text/css" href="/style/fontawesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="/style/solid.min.css" />
-    <link rel="stylesheet" type="text/css" href="/style/brands.min.css" />
     <title>{ title || 'Joakim Rosenstam' }</title>
     <meta name="description" content={ description }>
   </head>
 
-  <body class="container">
+  <body class="container p-4 mx-auto">
     <nav class="flex flex-wrap items-center justify-between pt-2 pb-4 mb-8">
       <div class="flex items-center mr-6 text-lg text-xl flex-no-shrink">
         <a href="/" class="font-medium text-gray-600 hover:text-gray-500">Joakim Rosenstam</a>

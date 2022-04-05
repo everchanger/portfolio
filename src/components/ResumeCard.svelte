@@ -11,13 +11,13 @@
 <Card>
   <slot name="header">
     <div class="job-listing-header">
+      {#if logo}
+        <img src={ logo } alt={ company } width="160" height="65" class="order-1 mb-1 sm:order-2 sm:mb-0" />
+      {/if}
       <div class="order-2 sm:order-1">
         <h2 class="hidden text-2xl sm:block">{ company }</h2>
         <p class="text-sm italic">{ employment_period }</p>
       </div>
-      {#if logo}
-        <img src={ logo } alt={ company } width="160" height="65" class="order-1 mb-1 sm:order-2 sm:mb-0" />
-      {/if}
     </div>
   </slot>
   <div class="job-summary">
