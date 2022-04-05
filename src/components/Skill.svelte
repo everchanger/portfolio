@@ -4,7 +4,7 @@
 </script>
 
 <div class={$$props.class}>
-  <h3>{ header }</h3>
+  <h3 class="mb-2 font-bold">{ header }</h3>
   <ul>
     {#each skills as skill}
     <li>{ skill }</li>

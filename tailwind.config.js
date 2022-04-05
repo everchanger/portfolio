@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      body: ['Roboto'],
+      body: ['Zen Kaku Gothic New'],
     },
     container: {
       screens: {
