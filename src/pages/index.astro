@@ -23,10 +23,9 @@ const { skills } = data
       <Contact class="mb-2 md:w-1/2" header="Discord" content="everchanger#2119" href="https://discordapp.com/" />
       <Contact class="mb-2 md:w-1/2" header="Skype" content="joakim.rosenstam" href="skype:joakim.rosenstam?chat" />
     </div>
-    <p class="max-w-prose">I'm a software developer based in Stockholm, Sweden. My skills are broad and I've worked on pretty much every part of the projects I've been involved in. Everything from the planning/architecture stage to the prototyping and actual production stages to final delivery of the product. I started out as a C++ developer but I would like to think that I'm also fluent in web (HTML/CSS/JS/PHP) by now.</p>
+    <p class="max-w-prose">I'm a software developer based in Sweden. My skills are broad and I've worked on pretty much every part of the projects I've been involved in. Everything from the planning/architecture stage to the prototyping and actual production stages to final delivery of the product. I started out as a C++ developer but I would like to think that I'm also fluent in web (HTML/CSS/JS/PHP) by now.</p>
     <div class="flex flex-wrap text-lg text-center">
       {skills.map((skill) => (<Skill class="w-1/2 mb-14" header={skill.header} skills={skill.skills} />))}
     </div>
-    
   </div>
 </Layout>

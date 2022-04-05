@@ -6,7 +6,7 @@
     "start": "astro dev",
     "build": "astro build"
   },
-  "devDependencies": {
+  "dependencies": {
     "@astrojs/renderer-svelte": "^0.1.1",
     "astro": "^0.18.9",
     "tailwindcss": "^2.2.7"
