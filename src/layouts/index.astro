@@ -1,8 +1,5 @@
 ---
 import '../styles/global.css';
-import '../styles/fontawesome.min.css'
-import '../styles/solid.min.css'
-import '../styles/brands.min.css'
 const { title, description } = Astro.props;
 ---
 
@@ -15,6 +12,7 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>{ title || 'Joakim Rosenstam' }</title>
     <meta name="description" content={ description }>
   </head>
