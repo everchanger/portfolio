@@ -4,7 +4,7 @@ export default {
       company: 'Dahl AB',
       logo: '/assets/logos/dahl.jpg',
       employment_period: 'Juni 2020 - Current employer',
-      summary: ['Currently working on Dahl AB\'s new e-commerce site. Built using Nuxt and a microservices architecture.'],
+      summary: ['Currently working as tech lead on the frontend team, building SGDS gruppen (Dahl AB, Optimera AB) new e-commerce site. Built using Nuxt and a microservices architecture.'],
       tools: [
         'JavaScript (ES6) and TypeScript, Nuxt (Vue.js) frontend.',
         'TypeScript microservices on the backend.',
