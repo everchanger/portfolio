@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+
+/* body:before {
+  content: 'test';
+  @apply absolute top-0 left-0 z-10 w-full h-full bg-red-500;
+} */
+
 #mobile-menu {
   max-height: 0;
   overflow: hidden;
@@ -19,14 +25,6 @@
 
 #talk {
   transition: opacity 350ms ease; 
-}
-
-.work-blurb ul li {
-  @apply mb-1 ml-1;
-}
-
-.work-blurb h3 {
-  @apply mb-2 font-medium;
 }
 
 .job-summary {

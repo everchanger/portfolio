@@ -1,50 +1,106 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="overflow-scroll text-sm leading-normal text-gray-700 bg-white font-body">
+<html
+  lang="en"
+  class="overflow-scroll text-sm leading-normal text-orange-700 bg-white font-body"
+>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>{ title || 'Joakim Rosenstam' }</title>
-    <meta name="description" content={ description }>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>{title || "Joakim Rosenstam"}</title>
+    <meta name="description" content={description} />
   </head>
 
-  <body class="container p-4 mx-auto">
-    <nav class="flex flex-wrap items-center justify-between pt-2 pb-4 mb-8">
+  <body class="container relative p-4 mx-auto">
+    <nav
+      class="z-20 flex flex-wrap items-center justify-between pt-2 pb-4 mb-8"
+    >
       <div class="flex items-center mr-6 text-lg text-xl flex-no-shrink">
-        <a href="/" class="font-medium text-gray-600 hover:text-gray-500">Joakim Rosenstam</a>
+        <a href="/" class="font-medium text-orange-600 hover:text-orange-500"
+          >Joakim Rosenstam</a
+        >
       </div>
       <div id="hamburger-button" class="block sm:hidden">
-        <button class="flex items-center px-3 py-2 text-gray-600 border border-gray-500 rounded">
-          <svg class="w-4 h-4 fill-current stroke-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <button
+          class="flex items-center px-3 py-2 text-orange-600 border border-orange-500 rounded"
+        >
+          <svg
+            class="w-4 h-4 fill-current stroke-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <title>Menu</title>
-            <path id="icon-path-closed" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            <path style="stroke-width: 3;" id="icon-path-opened" class="hidden" d="M 0,0 L 20,20 M 0,20 L 20,0" />
+            <path
+              id="icon-path-closed"
+              d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            <path
+              style="stroke-width: 3;"
+              id="icon-path-opened"
+              class="hidden"
+              d="M 0,0 L 20,20 M 0,20 L 20,0"></path>
           </svg>
         </button>
       </div>
-      <div id="mobile-menu" class="flex-grow w-full text-gray-600 sm:flex sm:items-center sm:w-auto">
+      <div
+        id="mobile-menu"
+        class="flex-grow w-full text-orange-600 sm:flex sm:items-center sm:w-auto"
+      >
         <div class="text-xl sm:flex-grow">
-          <a id="nav-cv" class="block mt-4 mr-4 font-medium nav-link sm:inline-block sm:mt-0 hover:text-gray-500" href="/cv">CV</a>
-          <a id="nav-projects" class="block mt-4 mr-4 font-medium nav-link sm:inline-block sm:mt-0 hover:text-gray-500" href="/projects">Projects</a>
+          <a
+            id="nav-cv"
+            class="block mt-4 mr-4 font-medium nav-link sm:inline-block sm:mt-0 hover:text-orange-500"
+            href="/cv">CV</a
+          >
+          <a
+            id="nav-projects"
+            class="block mt-4 mr-4 font-medium nav-link sm:inline-block sm:mt-0 hover:text-orange-500"
+            href="/projects">Projects</a
+          >
         </div>
         <div class="mt-4 sm:mt-0">
-          <a class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-gray-500" href="https://www.linkedin.com/in/jrosenstam/" title="LinkedIn"><i class="fab fa-linkedin fa-fw fa-lg"></i></a>
-          <a class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-gray-500" href="https://github.com/everchanger" title="Github"><i class="fab fa-github fa-fw fa-lg"></i></a>
-          <a class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-gray-500" href="https://www.facebook.com/joakim.rosenstam" title="Facebook"><i class="fab fa-facebook fa-fw fa-lg"></i></a>
+          <a
+            class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-orange-500"
+            href="https://www.linkedin.com/in/jrosenstam/"
+            title="LinkedIn"
+            ><i class="fab fa-linkedin fa-fw fa-lg"></i>
+          </a>
+          <a
+            class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-orange-500"
+            href="https://github.com/everchanger"
+            title="Github"
+            ><i class="fab fa-github fa-fw fa-lg"></i>
+          </a>
+          <a
+            class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-orange-500"
+            href="https://www.facebook.com/joakim.rosenstam"
+            title="Facebook"
+            ><i class="fab fa-facebook fa-fw fa-lg"></i>
+          </a>
         </div>
       </div>
     </nav>
-    <slot/>
+    <slot />
+    <script type="text/javascript" src="/assets/index.js"></script>
   </body>
-
-  <script type="text/javascript" src="/assets/index.js"></script>
 </html>

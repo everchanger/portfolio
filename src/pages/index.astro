@@ -1,31 +1,82 @@
 ---
-import Layout from '../layouts/index.astro'
-import Contact from '../components/Contact.svelte'
-import Skill from '../components/Skill.svelte'
+import Layout from "../layouts/index.astro";
+import Contact from "../components/Contact.svelte";
+import Skill from "../components/Skill.svelte";
 
-import data from '../data/index.js'
+import data from "../data/index.js";
 
-const { skills } = data
+const { skills } = data;
 ---
 
-<Layout title="Joakim Rosenstam" description="Personal site of Joakim Rosenstam, a software developer currently working at Dahl AB as a fullstack developer in Stockholm, Sweden.">
-  <div class="flex flex-col items-center space-y-20">
-    <div class="space-y-2 text-4xl text-center">
+<Layout
+  title="Joakim Rosenstam"
+  description="Personal site of Joakim Rosenstam, a software developer currently working at Dahl AB as a fullstack developer in Stockholm, Sweden."
+>
+  <div class="relative flex flex-col items-center space-y-20">
+    <div class="absolute top-0 left-0 w-full h-[25%] bg-orange-500 rounded">
+    </div>
+    <div
+      class="z-10 space-y-2 text-3xl font-bold tracking-wider text-center text-white md:text-5xl"
+    >
       <h1>Joakim Rosenstam</h1>
       <p>Web/Software Developer</p>
     </div>
-    <div class="p-3 bg-white rounded-full shadow-lg">
-      <img class="object-cover w-64 pt-6 rounded-full bg-gradient-to-t from-gray-200 to-blue-200 h-80" src="/assets/joakim-nobg.png" alt="Joakim Rosenstam" />
+
+    <div class="z-10 p-3 bg-white rounded-full shadow-lg">
+      <img
+        class="object-cover w-64 pt-6 rounded-full bg-gradient-to-t from-gray-200 to-blue-200 h-80"
+        src="/assets/joakim-nobg.png"
+        alt="Joakim Rosenstam"
+      />
     </div>
-    <div class="flex flex-col text-center md:flex-row md:flex-wrap">
-      <Contact class="mb-2 md:w-1/2" header="Mail" content="joakim.rosenstam@gmail.com" href="mailto:joakim.rosenstam@gmail.com" />
-      <Contact class="mb-2 md:w-1/2" header="Phone" content="+46 (0)73 262 80 70" href="tel:+46732628070" />
-      <Contact class="mb-2 md:w-1/2" header="Discord" content="everchanger#2119" href="https://discordapp.com/" />
-      <Contact class="mb-2 md:w-1/2" header="Skype" content="joakim.rosenstam" href="skype:joakim.rosenstam?chat" />
+    <div class="flex flex-col text-lg text-center md:flex-row md:flex-wrap">
+      <Contact
+        class="mb-6 md:w-1/2"
+        header="Mail"
+        content="joakim.rosenstam@gmail.com"
+        href="mailto:joakim.rosenstam@gmail.com"
+      />
+      <Contact
+        class="mb-6 md:w-1/2"
+        header="Phone"
+        content="+46 (0)73 262 80 70"
+        href="tel:+46732628070"
+      />
+      <Contact
+        class="mb-6 md:w-1/2"
+        header="Discord"
+        content="everchanger#2119"
+        href="https://discordapp.com/"
+      />
+      <Contact
+        class="mb-6 md:w-1/2"
+        header="Skype"
+        content="joakim.rosenstam"
+        href="skype:joakim.rosenstam?chat"
+      />
     </div>
-    <p class="max-w-prose">I'm a software developer based in Sweden. My skills are broad and I've worked on pretty much every part of the projects I've been involved in. Everything from the planning/architecture stage to the prototyping and actual production stages to final delivery of the product. I started out as a C++ developer but I would like to think that I'm also fluent in web (HTML/CSS/JS/PHP) by now.</p>
+    <div
+      class="flex justify-center w-full text-lg tracking-wide text-orange-900 rounded"
+    >
+      <p class="p-4 max-w-prose">
+        I'm a software developer based in Sweden. My skills are broad and I've
+        worked on pretty much every part of the projects I've been involved in.
+        Everything from the planning/architecture stage to the prototyping and
+        actual production stages to final delivery of the product. I started out
+        as a C++ developer but I would like to think that I'm also fluent in web
+        (HTML/CSS/JS/PHP) by now.
+      </p>
+    </div>
     <div class="flex flex-wrap text-lg text-center">
-      {skills.map((skill) => (<Skill class="w-1/2 mb-14" header={skill.header} skills={skill.skills} />))}
+      {
+        skills.map((skill) => (
+          <Skill
+            class="w-1/2 text-orange-900 mb-14"
+            header={skill.header}
+            skills={skill.skills}
+          />
+        ))
+      }
     </div>
   </div>
 </Layout>
