@@ -1,14 +1,35 @@
 export default {
   resume: [
     {
-      company: 'Dahl AB',
-      logo: '/assets/logos/dahl.jpg',
-      employment_period: 'Juni 2020 - Current employer',
-      summary: ['Currently working as tech lead on the frontend team, building SGDS gruppen (Dahl AB, Optimera AB) new e-commerce site. Built using Nuxt and a microservices architecture.'],
+      company: 'Configura',
+      logo: undefined,
+      employment_period: 'August 2024 - Present',
+      summary: [
+        'Working as a fullstack developer on Configura\'s content platform, a set of microservices deployed on AWS EKS.',
+        'I use TypeScript with Fastify and TypeBox to create fast, well-documented APIs.',
+        'I\'m part of the internal web architecture council where we discuss and establish best practices for web development inside Configura.',
+      ],
       tools: [
-        'JavaScript (ES6) and TypeScript, Nuxt (Vue.js) frontend.',
-        'TypeScript microservices on the backend.',
-        'Jira/Bitbucket, Atlassian stack',
+        'TypeScript, Fastify, and TypeBox for backend services and APIs.',
+        'AWS EKS, Kubernetes, and microservices platform work.',
+        'Web architecture collaboration across teams.',
+      ],
+    },
+    {
+      company: 'Dahl Sverige AB',
+      logo: '/assets/logos/dahl.jpg',
+      employment_period: 'June 2020 - August 2024',
+      summary: [
+        'Worked as tech lead on the frontend team, building SGDS Gruppen (Dahl, Optimera) new e-commerce platform.',
+        'For the frontend we used Nuxt with an in-house developed component library, Tailwind CSS, Vue 3, and TypeScript.',
+        'The backend was comprised of multiple microservices for different domains, integrated through GraphQL and Apollo.',
+        'Our microservices were deployed as Docker images on OpenShift, and some services ran in AWS as Lambdas.',
+        'In the frontend team we worked closely with UX and QA to maintain a high-quality product.',
+      ],
+      tools: [
+        'Nuxt, Vue 3, TypeScript, and Tailwind CSS on the frontend.',
+        'GraphQL/Apollo integration with a microservices backend.',
+        'Docker, OpenShift, AWS Lambda, and Atlassian tooling.',
       ],
     },
     {
