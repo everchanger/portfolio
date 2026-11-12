@@ -12,10 +12,17 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f7f7f4" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {}
+    </script>
   </head>
   <body class="bg-canvas font-sans text-ink antialiased">
     <div class="mx-auto min-h-screen max-w-6xl px-5 sm:px-8">
@@ -28,9 +35,17 @@ const {
           <a class="transition-colors hover:text-ink" href="/#experience">Experience</a>
           <a class="transition-colors hover:text-ink" href="/#expertise">Expertise</a>
           <a class="transition-colors hover:text-ink" href="/cv">Full CV</a>
+          <label id="theme-control" class="hidden items-center gap-2">
+            <span>Theme</span>
+            <select id="theme-select" class="rounded-md border border-line bg-paper px-2 py-1 text-ink">
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
         </nav>
         <a
-          class="col-start-2 row-start-1 rounded-md bg-accent px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
+          class="col-start-2 row-start-1 rounded-md bg-accent px-3 py-2 text-sm font-medium text-canvas transition-colors hover:bg-accent-dark"
           href="mailto:joakim.rosenstam@gmail.com"
         >Get in touch</a>
       </header>
@@ -44,5 +59,29 @@ const {
         </div>
       </footer>
     </div>
+    <script>
+      const control = document.querySelector<HTMLElement>("#theme-control");
+      const select = document.querySelector<HTMLSelectElement>("#theme-select");
+
+      if (control && select) {
+        select.value = document.documentElement.dataset.theme || "system";
+        control.classList.replace("hidden", "inline-flex");
+        select.addEventListener("change", () => {
+          const theme = select.value;
+          if (theme === "light" || theme === "dark") {
+            document.documentElement.dataset.theme = theme;
+          } else {
+            delete document.documentElement.dataset.theme;
+          }
+          try {
+            if (theme === "system") {
+              localStorage.removeItem("theme");
+            } else {
+              localStorage.setItem("theme", theme);
+            }
+          } catch {}
+        });
+      }
+    </script>
   </body>
 </html>

@@ -13,6 +13,36 @@
 }
 
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --color-canvas: #111b24;
+      --color-paper: #1b2935;
+      --color-ink: #edf2f5;
+      --color-muted: #b6c4ce;
+      --color-line: #3a4b58;
+      --color-accent: #a4cff5;
+      --color-accent-dark: #d3eaff;
+      --shadow-soft: 0 16px 40px -24px rgb(0 0 0 / 60%);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --color-canvas: #111b24;
+    --color-paper: #1b2935;
+    --color-ink: #edf2f5;
+    --color-muted: #b6c4ce;
+    --color-line: #3a4b58;
+    --color-accent: #a4cff5;
+    --color-accent-dark: #d3eaff;
+    --shadow-soft: 0 16px 40px -24px rgb(0 0 0 / 60%);
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
@@ -24,7 +54,7 @@
   }
 
   ::selection {
-    color: var(--color-ink);
+    color: #202722;
     background: #dce8f3;
   }
 }
