@@ -15,4 +15,4 @@ npm run preview
 
 The static production site is generated in `dist/`. Netlify can deploy it with `npm run build` as the build command and `dist` as the publish directory; those settings are also recorded in `netlify.toml`.
 
-The theme follows the operating system by default. Visitors can choose Light or Dark in the navigation; their choice is saved locally, and System restores the OS preference.
+The theme follows the operating system by default. Visitors can toggle light and dark mode in the navigation; their choice is saved locally.

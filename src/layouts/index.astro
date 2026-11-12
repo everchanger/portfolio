@@ -35,14 +35,15 @@ const {
           <a class="transition-colors hover:text-ink" href="/#experience">Experience</a>
           <a class="transition-colors hover:text-ink" href="/#expertise">Expertise</a>
           <a class="transition-colors hover:text-ink" href="/cv">Full CV</a>
-          <label id="theme-control" class="hidden items-center gap-2">
-            <span>Theme</span>
-            <select id="theme-select" class="rounded-md border border-line bg-paper px-2 py-1 text-ink">
-              <option value="system">System</option>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
-          </label>
+          <button id="theme-toggle" type="button" class="hidden rounded-md border border-line bg-paper p-2 text-ink transition-colors hover:border-accent" aria-label="Switch to dark mode">
+            <svg id="theme-moon" aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 0 1 11.2 3a9 9 0 1 0 9.8 9.8Z" />
+            </svg>
+            <svg id="theme-sun" aria-hidden="true" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4" />
+              <path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+          </button>
         </nav>
         <a
           class="col-start-2 row-start-1 rounded-md bg-accent px-3 py-2 text-sm font-medium text-canvas transition-colors hover:bg-accent-dark"
@@ -60,26 +61,32 @@ const {
       </footer>
     </div>
     <script>
-      const control = document.querySelector<HTMLElement>("#theme-control");
-      const select = document.querySelector<HTMLSelectElement>("#theme-select");
+      const toggle = document.querySelector<HTMLButtonElement>("#theme-toggle");
+      const moon = document.querySelector<SVGElement>("#theme-moon");
+      const sun = document.querySelector<SVGElement>("#theme-sun");
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-      if (control && select) {
-        select.value = document.documentElement.dataset.theme || "system";
-        control.classList.replace("hidden", "inline-flex");
-        select.addEventListener("change", () => {
-          const theme = select.value;
-          if (theme === "light" || theme === "dark") {
-            document.documentElement.dataset.theme = theme;
-          } else {
-            delete document.documentElement.dataset.theme;
-          }
+      if (toggle && moon && sun) {
+        const isDark = () => document.documentElement.dataset.theme
+          ? document.documentElement.dataset.theme === "dark"
+          : systemTheme.matches;
+        const updateToggle = () => {
+          const dark = isDark();
+          toggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+          moon.classList.toggle("hidden", dark);
+          sun.classList.toggle("hidden", !dark);
+        };
+
+        updateToggle();
+        toggle.classList.replace("hidden", "inline-flex");
+        systemTheme.addEventListener("change", updateToggle);
+        toggle.addEventListener("click", () => {
+          const theme = isDark() ? "light" : "dark";
+          document.documentElement.dataset.theme = theme;
           try {
-            if (theme === "system") {
-              localStorage.removeItem("theme");
-            } else {
-              localStorage.setItem("theme", theme);
-            }
+            localStorage.setItem("theme", theme);
           } catch {}
+          updateToggle();
         });
       }
     </script>
