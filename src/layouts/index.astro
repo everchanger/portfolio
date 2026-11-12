@@ -1,106 +1,94 @@
 ---
 import "../styles/global.css";
-const { title, description } = Astro.props;
+
+const {
+  title = "Joakim Rosenstam — Principal Fullstack Developer",
+  description = "Joakim Rosenstam is a principal fullstack developer based in Motala, Sweden.",
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html
-  lang="en"
-  class="overflow-scroll text-sm leading-normal text-orange-700 bg-white font-body"
->
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <meta name="theme-color" content="#ffffff" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>{title || "Joakim Rosenstam"}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {}
+    </script>
   </head>
+  <body class="bg-canvas font-sans text-ink antialiased">
+    <div class="mx-auto min-h-screen max-w-6xl px-5 sm:px-8">
+      <header class="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-4 border-b border-line py-5 md:flex md:justify-between md:gap-x-8 md:py-6">
+        <a href="/" class="text-sm font-semibold tracking-tight text-ink">
+          Joakim Rosenstam
+        </a>
+        <nav aria-label="Main navigation" class="col-span-2 row-start-2 flex flex-wrap items-center gap-x-4 gap-y-3 text-sm text-muted sm:gap-x-6 md:order-none">
+          <a class="transition-colors hover:text-ink" href="/#about">About</a>
+          <a class="transition-colors hover:text-ink" href="/#experience">Experience</a>
+          <a class="transition-colors hover:text-ink" href="/#expertise">Expertise</a>
+          <a class="transition-colors hover:text-ink" href="/cv">Full CV</a>
+          <button id="theme-toggle" type="button" class="hidden rounded-md border border-line bg-paper p-2 text-ink transition-colors hover:border-accent" aria-label="Switch to dark mode">
+            <svg id="theme-moon" aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 0 1 11.2 3a9 9 0 1 0 9.8 9.8Z" />
+            </svg>
+            <svg id="theme-sun" aria-hidden="true" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4" />
+              <path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+          </button>
+        </nav>
+        <a
+          class="col-start-2 row-start-1 rounded-md bg-accent px-3 py-2 text-sm font-medium text-canvas transition-colors hover:bg-accent-dark"
+          href="mailto:joakim.rosenstam@gmail.com"
+        >Get in touch</a>
+      </header>
+      <slot />
+      <footer class="mt-24 flex flex-col gap-3 border-t border-line py-7 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+        <p>Joakim Rosenstam · Motala, Sweden</p>
+        <div class="flex gap-5">
+          <a class="transition-colors hover:text-ink" href="https://www.linkedin.com/in/jrosenstam/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="transition-colors hover:text-ink" href="https://github.com/everchanger" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="transition-colors hover:text-ink" href="mailto:joakim.rosenstam@gmail.com">Email</a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>("#theme-toggle");
+      const moon = document.querySelector<SVGElement>("#theme-moon");
+      const sun = document.querySelector<SVGElement>("#theme-sun");
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-  <body class="container relative p-4 mx-auto">
-    <nav
-      class="z-20 flex flex-wrap items-center justify-between pt-2 pb-4 mb-8"
-    >
-      <div class="flex items-center mr-6 text-lg text-xl flex-no-shrink">
-        <a href="/" class="font-medium text-orange-600 hover:text-orange-500"
-          >Joakim Rosenstam</a
-        >
-      </div>
-      <div id="hamburger-button" class="block sm:hidden">
-        <button
-          class="flex items-center px-3 py-2 text-orange-600 border border-orange-500 rounded"
-        >
-          <svg
-            class="w-4 h-4 fill-current stroke-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path
-              id="icon-path-closed"
-              d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            <path
-              style="stroke-width: 3;"
-              id="icon-path-opened"
-              class="hidden"
-              d="M 0,0 L 20,20 M 0,20 L 20,0"></path>
-          </svg>
-        </button>
-      </div>
-      <div
-        id="mobile-menu"
-        class="flex-grow w-full text-orange-600 sm:flex sm:items-center sm:w-auto"
-      >
-        <div class="text-xl sm:flex-grow">
-          <a
-            id="nav-cv"
-            class="block mt-4 mr-4 font-medium nav-link sm:inline-block sm:mt-0 hover:text-orange-500"
-            href="/cv">CV</a
-          >
-          <a
-            id="nav-projects"
-            class="block mt-4 mr-4 font-medium nav-link sm:inline-block sm:mt-0 hover:text-orange-500"
-            href="/projects">Projects</a
-          >
-        </div>
-        <div class="mt-4 sm:mt-0">
-          <a
-            class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-orange-500"
-            href="https://www.linkedin.com/in/jrosenstam/"
-            title="LinkedIn"
-            ><i class="fab fa-linkedin fa-fw fa-lg"></i>
-          </a>
-          <a
-            class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-orange-500"
-            href="https://github.com/everchanger"
-            title="Github"
-            ><i class="fab fa-github fa-fw fa-lg"></i>
-          </a>
-          <a
-            class="block mt-4 mr-4 font-medium sm:inline-block sm:mt-0 hover:text-orange-500"
-            href="https://www.facebook.com/joakim.rosenstam"
-            title="Facebook"
-            ><i class="fab fa-facebook fa-fw fa-lg"></i>
-          </a>
-        </div>
-      </div>
-    </nav>
-    <slot />
-    <script type="text/javascript" src="/assets/index.js"></script>
+      if (toggle && moon && sun) {
+        const isDark = () => document.documentElement.dataset.theme
+          ? document.documentElement.dataset.theme === "dark"
+          : systemTheme.matches;
+        const updateToggle = () => {
+          const dark = isDark();
+          toggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+          moon.classList.toggle("hidden", dark);
+          sun.classList.toggle("hidden", !dark);
+        };
+
+        updateToggle();
+        toggle.classList.replace("hidden", "inline-flex");
+        systemTheme.addEventListener("change", updateToggle);
+        toggle.addEventListener("click", () => {
+          const theme = isDark() ? "light" : "dark";
+          document.documentElement.dataset.theme = theme;
+          try {
+            localStorage.setItem("theme", theme);
+          } catch {}
+          updateToggle();
+        });
+      }
+    </script>
   </body>
 </html>

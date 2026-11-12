@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
-  "version": "2.0.0",
-  "description": "Portfolio project of Joakim Rosenstam",
+  "version": "3.0.0",
+  "description": "Portfolio of Joakim Rosenstam",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -9,9 +9,9 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^0.1.0",
-    "@astrojs/sitemap": "^0.1.0",
-    "@astrojs/svelte": "^0.0.2",
-    "astro": "^1.0.0-beta.2"
+    "@astrojs/sitemap": "^3.7.4",
+    "@tailwindcss/vite": "^4.3.5",
+    "astro": "^7.4.11",
+    "tailwindcss": "^4.3.5"
   }
 }
