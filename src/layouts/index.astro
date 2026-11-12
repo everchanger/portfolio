@@ -19,20 +19,20 @@ const {
   </head>
   <body class="bg-canvas font-sans text-ink antialiased">
     <div class="mx-auto min-h-screen max-w-6xl px-5 sm:px-8">
-      <header class="flex flex-wrap items-center justify-between gap-x-8 gap-y-4 border-b border-line py-6">
+      <header class="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-4 border-b border-line py-5 md:flex md:justify-between md:gap-x-8 md:py-6">
         <a href="/" class="text-sm font-semibold tracking-tight text-ink">
           Joakim Rosenstam
         </a>
-        <nav aria-label="Main navigation" class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
+        <nav aria-label="Main navigation" class="col-span-2 row-start-2 flex flex-wrap items-center gap-x-4 gap-y-3 text-sm text-muted sm:gap-x-6 md:order-none">
           <a class="transition-colors hover:text-ink" href="/#about">About</a>
           <a class="transition-colors hover:text-ink" href="/#experience">Experience</a>
           <a class="transition-colors hover:text-ink" href="/#expertise">Expertise</a>
           <a class="transition-colors hover:text-ink" href="/cv">Full CV</a>
-          <a
-            class="rounded-md bg-forest px-3 py-2 font-medium text-white transition-colors hover:bg-forest-dark"
-            href="mailto:joakim.rosenstam@gmail.com"
-          >Get in touch</a>
         </nav>
+        <a
+          class="col-start-2 row-start-1 rounded-md bg-accent px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
+          href="mailto:joakim.rosenstam@gmail.com"
+        >Get in touch</a>
       </header>
       <slot />
       <footer class="mt-24 flex flex-col gap-3 border-t border-line py-7 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">

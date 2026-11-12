@@ -6,19 +6,25 @@
   --color-ink: #202722;
   --color-muted: #68716b;
   --color-line: #e4e6e1;
-  --color-forest: #355747;
-  --color-forest-dark: #294638;
+  --color-accent: #28547b;
+  --color-accent-dark: #1d405f;
   --font-sans: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
   --shadow-soft: 0 16px 40px -24px rgb(32 39 34 / 30%);
 }
 
 @layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   body {
     min-width: 320px;
   }
 
   ::selection {
     color: var(--color-ink);
-    background: #dce5de;
+    background: #dce8f3;
   }
 }
