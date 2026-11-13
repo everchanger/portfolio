@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test:seo": "npm run build && node --test tests/seo.test.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
