@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const origin = "https://joakim.rosenstam.net";
-const routes = ["/", "/cv/", "/projects/"];
+const routes = ["/", "/cv/"];
 const readDist = (path) => readFile(new URL(`../dist/${path}`, import.meta.url), "utf8");
 
 test("sitemap and robots.txt expose the canonical pages", async () => {
@@ -37,6 +37,6 @@ test("each page has a unique canonical URL, title and description", async () => 
 
   assert.equal(titles.size, routes.length);
   assert.equal(descriptions.size, routes.length);
-  assert.ok(pages[0].includes('href="/projects/"'));
+  assert.ok(pages.every((html) => !html.includes('href="/projects/"')));
   assert.match(pages[0], /id="theme-toggle"[^>]*class="[^"]*\binvisible\b[^"]*\binline-flex\b/);
 });
