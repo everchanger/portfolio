@@ -5,6 +5,11 @@ const {
   title = "Joakim Rosenstam — Principal Fullstack Developer",
   description = "Joakim Rosenstam is a principal fullstack developer based in Motala, Sweden.",
 } = Astro.props;
+
+if (!Astro.site) {
+  throw new Error("Configure site in astro.config.mjs to generate canonical URLs.");
+}
+const canonicalURL = new URL(Astro.url.pathname.replace(/\/?$/, "/"), Astro.site);
 ---
 
 <!doctype html>
@@ -13,6 +18,7 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <script is:inline>
@@ -34,8 +40,8 @@ const {
           <a class="transition-colors hover:text-ink" href="/#about">About</a>
           <a class="transition-colors hover:text-ink" href="/#experience">Experience</a>
           <a class="transition-colors hover:text-ink" href="/#expertise">Expertise</a>
-          <a class="transition-colors hover:text-ink" href="/cv">Full CV</a>
-          <button id="theme-toggle" type="button" class="hidden rounded-md border border-line bg-paper p-2 text-ink transition-colors hover:border-accent" aria-label="Switch to dark mode">
+          <a class="transition-colors hover:text-ink" href="/cv/">Full CV</a>
+          <button id="theme-toggle" type="button" class="invisible inline-flex rounded-md border border-line bg-paper p-2 text-ink transition-colors hover:border-accent" aria-label="Switch to dark mode">
             <svg id="theme-moon" aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 0 1 11.2 3a9 9 0 1 0 9.8 9.8Z" />
             </svg>
@@ -78,7 +84,7 @@ const {
         };
 
         updateToggle();
-        toggle.classList.replace("hidden", "inline-flex");
+        toggle.classList.remove("invisible");
         systemTheme.addEventListener("change", updateToggle);
         toggle.addEventListener("click", () => {
           const theme = isDark() ? "light" : "dark";

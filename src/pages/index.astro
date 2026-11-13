@@ -5,8 +5,8 @@ import { experience } from "../data/experience.js";
 const recentExperience = experience.slice(0, 3);
 const expertise = [
   {
-    title: "Application development",
-    description: "TypeScript, Fastify, TypeBox, Vue, Nuxt, PHP, Laravel, and C++.",
+    title: "Web development",
+    description: "TypeScript, Vue, Nuxt, Tailwind CSS, Fastify, TypeBox, PHP, and Laravel.",
   },
   {
     title: "Cloud & platform",
@@ -14,13 +14,13 @@ const expertise = [
   },
   {
     title: "Architecture",
-    description: "Microservices, API design, and frontend architecture.",
+    description: "Microservices, GraphQL, API design, and frontend architecture.",
   },
 ];
 ---
 
 <Layout
-  description="Joakim Rosenstam is a principal fullstack developer at Configura, based in Motala, Sweden. He builds TypeScript services and cloud platforms."
+  description="Joakim Rosenstam is a fullstack developer in Sweden, working with TypeScript, web applications, APIs, and cloud platforms."
 >
   <main>
     <section id="about" class="grid scroll-mt-8 items-center gap-12 py-16 sm:py-24 md:grid-cols-[1fr_260px] md:gap-16">
@@ -32,13 +32,16 @@ const expertise = [
           Joakim Rosenstam
         </h1>
         <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">
-          I’m a software developer currently working on Configura’s content platform. Previously, I worked on e-commerce at Dahl, web applications at Perido and Webhallen, and secure systems at Expisoft.
+          I’m a software developer based in Sweden. I enjoy coding, exploring new technology, and solving tricky problems. I’m a generalist who believes in learning by doing, and I’ve worked across projects from planning and architecture to production and delivery.
+        </p>
+        <p class="mt-4 max-w-2xl text-lg leading-8 text-muted">
+          I currently work on Configura’s content platform, building TypeScript APIs and cloud services. Before that, I led frontend development on Dahl’s e-commerce platform using Vue, Nuxt, and TypeScript.
         </p>
         <div class="mt-8 flex flex-wrap items-center gap-3">
           <a href="#experience" class="rounded-md bg-accent px-5 py-3 text-sm font-medium text-canvas transition-colors hover:bg-accent-dark">
             Recent experience
           </a>
-          <a href="/cv" class="rounded-md border border-line bg-paper px-5 py-3 text-sm font-medium text-ink transition-colors hover:border-accent">
+          <a href="/cv/" class="rounded-md border border-line bg-paper px-5 py-3 text-sm font-medium text-ink transition-colors hover:border-accent">
             Full career history
           </a>
         </div>
@@ -78,7 +81,7 @@ const expertise = [
           <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Career</p>
           <h2 class="mt-2 text-3xl font-semibold tracking-tight text-ink">Experience</h2>
         </div>
-        <a href="/cv" class="text-sm font-medium text-accent transition-colors hover:text-accent-dark">
+        <a href="/cv/" class="text-sm font-medium text-accent transition-colors hover:text-accent-dark">
           Full career history <span aria-hidden="true">→</span>
         </a>
       </div>
@@ -103,7 +106,7 @@ const expertise = [
         <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Technologies</p>
         <h2 class="mt-2 text-3xl font-semibold tracking-tight text-ink">Tools and technologies</h2>
         <p class="mt-4 leading-7 text-muted">
-          My work has included C++ and secure systems, web applications, e-commerce, and cloud platforms.
+          My recent work spans web applications, APIs, and cloud platforms. I started out with C++ and secure systems before moving into fullstack web development.
         </p>
       </div>
       <div class="mt-9 grid gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-3">
